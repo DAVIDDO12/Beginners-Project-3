@@ -1,5 +1,5 @@
 import random
-wordbank = ["apple", "grape", "flint", "grain", "table", "chair", "music", "plant"]
+wordbank = ["whose","fifty","front","doing","smart","adult","usage","stake","house","clean"]
 def Randomword():
     return random.choice(wordbank)
 def validateguess(guess):
@@ -21,6 +21,7 @@ def Feedback(secretword, guess):
 def Wordle():
     secretword = Randomword()
     print("Welcome to Wordle! You have 6 chances to guess a 5-letter word.")
+    print("🤢 : correct,🍊 : correct but in the wrong order,🗿 : incorrect")
     for attempt in range(1, 7):
         guess = input("Attempt {}/6: ").lower()
         validationresult = validateguess(guess)
